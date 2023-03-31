@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.githubapplication.ui.searchscreens.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_searchByUserNameFragment"
+            app:destination="@id/searchByUserNameFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_searchByRepoFragment"
+            app:destination="@id/searchByRepoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.githubapplication.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_containerHomeFragment"
+            app:destination="@id/containerHomeFragment"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.githubapplication.ui.login.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_containerHomeFragment"
+            app:destination="@id/containerHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/repositoriesFragment"
+        android:name="com.example.githubapplication.ui.repo.RepositoriesFragment"
+        android:label="RepositoriesFragment"
+        tools:layout="@layout/fragment_repositories"/>
+    <fragment
+        android:id="@+id/searchByUserNameFragment"
+        android:name="com.example.githubapplication.ui.searchscreens.SearchByUserNameFragment"
+        android:label="SearchByUserNameFragment"
+        tools:layout="@layout/fragment_search_by_username">
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchByRepoFragment"
+        android:name="com.example.githubapplication.ui.searchscreens.SearchByRepoFragment"
+        android:label="SearchByRepoFragment"
+        tools:layout="@layout/fragment_search_by_repo">
+        <argument
+            android:name="repoName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/containerHomeFragment"
+        android:name="com.example.githubapplication.ui.nestedgraph.ContainerHomeFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_containerHomeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_containerHomeFragment_to_repositoriesFragment"
+            app:destination="@id/repositoriesFragment" />
+    </fragment>
+
+
+</navigation>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GitHub Application</string>
+    <string name="text_pr_policy">By signing in you accept our <font color="#FC4C9CF3"> <u>Terms of use</u> </font> and \<p> <font color="#FC4C9CF3"> <u>Privacy policy</u></font></p></string>
+    <string name="text_login">Sign in to <b>GitHub</b> \<p>to</p> continue to <b>GitHub Android</b></string>
+    <string name="nested_scroll_text">Tutorialwing.com presents tutorial on NestedScrollView!
+        NestedScrollView is just like ScrollView, but it supports acting as both a nested
+        scrolling parent and child on both new and old versions of Android. Nested scrolling
+        is enabled by default. NestedScrollView is used when there is need for scrolling inside
+        another scrolling view. Normally this would be difficult task because system would be
+        unable to decide which view to scroll. This is where NestedScrollView comes into role.
+    </string>
+    <string name="tv_followers"> %s followers</string>
+    <string name="tv_following"> %s following</string>
+    <string name="repo_text">Repositories with "%s"</string>
+    <string name="people_text">People with " "%s" "</string>
+    <string name="text_long">Search all of GitHub for People, Repositories, Organizations, Issues, and Pull Requests.</string>
+    <string name="text_sk">%sk</string>
+</resources>
